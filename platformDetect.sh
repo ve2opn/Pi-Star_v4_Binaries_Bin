@@ -12,7 +12,7 @@ if [ -f /proc/device-tree/model ]; then
 	raspberryModel=$(tr -d '\0' </proc/device-tree/model)
 fi
 
-if [[ ${modelName} == "ARM"* ]]; then
+if [[ ${modelName} == "ARM"* ]] || [[ ${hardwareField} == *"ODROID-C"* ]]; then
 	# Pull the Board revision from /proc/cpuinfo
 	boardRev=$(grep 'Revision' /proc/cpuinfo | awk '{print $3}' | sed 's/^100//')
 
