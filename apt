@@ -1,4 +1,4 @@
 #!/bin/bash
 mount -o remount,rw /
-mount -o remount,rw /boot
+mount -o remount,rw /media/boot
 /usr/bin/apt "$@"
