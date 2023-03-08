@@ -76,6 +76,10 @@ if [[ ${modelName} == "ARM"* ]]; then
 
 	if [[ ${hardwareField} == "ODROID"* ]]; then
 		echo "Odroid XU3/XU4 System"
+	elif [[ ${hardwareField} == *"ODROID-C2"* ]]; then
+		echo "ODROID-C2"
+	elif [[ ${hardwareField} == *"ODROID-C4"* ]]; then
+		echo "ODROID-C4"
 	elif [[ ${hardwareField} == *"sun8i"* ]]; then
 		echo "sun8i based Pi Clone"
 	elif [[ ${hardwareField} == *"s5p4418"* ]]; then
