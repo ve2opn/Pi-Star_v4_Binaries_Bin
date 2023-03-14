@@ -74,12 +74,13 @@ if [[ ${modelName} == "ARM"* ]] || [[ ${hardwareField} == *"ODROID-C"* ]]; then
 	*) raspberryVer="Unknown ARM based System";;
 	esac
 
-	if [[ ${hardwareField} == "ODROID"* ]]; then
-		echo "Odroid XU3/XU4 System"
-	elif [[ ${hardwareField} == *"ODROID-C2"* ]]; then
+
+	if [[ ${hardwareField} == *"ODROID-C2"* ]]; then
 		echo "Odroid-C2"
 	elif [[ ${hardwareField} == *"ODROID-C4"* ]]; then
 		echo "Odroid-C4"
+    elif [[ ${hardwareField} == "ODROID"* ]]; then
+		echo "Odroid XU3/XU4 System"
 	elif [[ ${hardwareField} == *"sun8i"* ]]; then
 		echo "sun8i based Pi Clone"
 	elif [[ ${hardwareField} == *"s5p4418"* ]]; then
